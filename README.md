@@ -14,9 +14,9 @@ A next-generation CLI tool that turns **any application** — websites, Electron
 
 **Built for the Universal Automation Era** — From desktop Notepad to mobile Instagram, from Unity games to professional software — one platform to automate them all.
 
-**Built for AI Agents** — Configure an instruction in your `AGENT.md` or `.cursorrules` to run `opencli list` via Bash. The AI will automatically discover and invoke all available tools.
+**Built for AI Agents** — Configure an instruction in your `AGENT.md` or `.cursorrules` to run `openappcli list` via Bash. The AI will automatically discover and invoke all available tools.
 
-**CLI Hub** — Register any local CLI (`opencli register mycli`) so AI agents can discover and call it alongside built-in commands. Auto-installs missing tools via your package manager (e.g. if `gh` isn't installed, `opencli gh ...` runs `brew install gh` first then re-executes seamlessly).
+**CLI Hub** — Register any local CLI (`openappcli register mycli`) so AI agents can discover and call it alongside built-in commands. Auto-installs missing tools via your package manager (e.g. if `gh` isn't installed, `openappcli gh ...` runs `brew install gh` first then re-executes seamlessly).
 
 **CLI for Electron Apps** — Turn any Electron application into a CLI tool. Recombine, script, and extend apps like Antigravity Ultra from the terminal. AI agents can now control other AI apps natively.
 
@@ -44,7 +44,7 @@ There are many great automation tools. Here's when OpenAppCLI is the right choic
 | **Zero-config desktop app control** | **OpenAppCLI** | Automatic strategy detection and fallback mechanisms |
 | **Mobile app automation** | **OpenAppCLI** | Android/iOS support with vision and system-level access |
 | **Game automation** | **OpenAppCLI** | Engine-specific optimizations and anti-cheat bypass |
-| **Web data extraction** | OpenCLI | Focused on web and Electron apps |
+| **Web data extraction** | OpenAppCLI | Focused on web and Electron apps |
 | **Large-scale web crawling** | Crawl4AI, Scrapy | Purpose-built for throughput and scale |
 | **General browsing automation** | Browser-Use, Stagehand | LLM-driven general browsing for one-off tasks |
 
@@ -91,9 +91,9 @@ git clone https://github.com/wanghaisheng/openappcli.git && cd openappcli && npm
 
 ```bash
 # Android setup
-opencli mobile setup android
+openappcli mobile setup android
 # iOS setup (coming soon)
-opencli mobile setup ios
+openappcli mobile setup ios
 ```
 
 #### For Desktop Apps
@@ -101,11 +101,11 @@ opencli mobile setup ios
 
 ```bash
 # Windows
-opencli desktop setup windows --admin
+openappcli desktop setup windows --admin
 # macOS
-opencli desktop setup macos --accessibility
+openappcli desktop setup macos --accessibility
 # Linux
-opencli desktop setup linux --x11
+openappcli desktop setup linux --x11
 ```
 
 ### 3. Verify & Try
@@ -230,22 +230,22 @@ openappcli notepadpp list-files
 
 ## CLI Hub
 
-OpenCLI acts as a universal hub for your existing command-line tools — unified discovery, pure passthrough execution, and auto-install (if a tool isn't installed, OpenCLI runs `brew install <tool>` automatically before re-running the command).
+OpenAppCLI acts as a universal hub for your existing command-line tools — unified discovery, pure passthrough execution, and auto-install (if a tool isn't installed, OpenAppCLI runs `brew install <tool>` automatically before re-running the command).
 
 | External CLI | Description | Example |
 |--------------|-------------|---------|
-| **gh** | GitHub CLI | `opencli gh pr list --limit 5` |
-| **obsidian** | Obsidian vault management | `opencli obsidian search query="AI"` |
-| **docker** | Docker | `opencli docker ps` |
-| **lark-cli** | Lark/Feishu — messages, docs, calendar, tasks, 200+ commands | `opencli lark-cli calendar +agenda` |
-| **dingtalk** | DingTalk — cross-platform CLI for DingTalk's full suite, designed for humans and AI agents | `opencli dingtalk msg send --to user "hello"` |
-| **wecom** | WeCom/企业微信 — CLI for WeCom open platform, for humans and AI agents | `opencli wecom msg send --to user "hello"` |
-| **vercel** | Vercel — deploy projects, manage domains, env vars, logs | `opencli vercel deploy --prod` |
+| **gh** | GitHub CLI | `openappcli gh pr list --limit 5` |
+| **obsidian** | Obsidian vault management | `openappcli obsidian search query="AI"` |
+| **docker** | Docker | `openappcli docker ps` |
+| **lark-cli** | Lark/Feishu — messages, docs, calendar, tasks, 200+ commands | `openappcli lark-cli calendar +agenda` |
+| **dingtalk** | DingTalk — cross-platform CLI for DingTalk's full suite, designed for humans and AI agents | `openappcli dingtalk msg send --to user "hello"` |
+| **wecom** | WeCom/企业微信 — CLI for WeCom open platform, for humans and AI agents | `openappcli wecom msg send --to user "hello"` |
+| **vercel** | Vercel — deploy projects, manage domains, env vars, logs | `openappcli vercel deploy --prod` |
 
-**Register your own** — add any local CLI so AI agents can discover it via `opencli list`:
+**Register your own** — add any local CLI so AI agents can discover it via `openappcli list`:
 
 ```bash
-opencli register mycli
+openappcli register mycli
 ```
 
 ### Desktop App Adapters
@@ -267,7 +267,7 @@ To add a new Electron app, start with [docs/guide/electron-app-cli.md](./docs/gu
 
 ## Download Support
 
-OpenCLI supports downloading images, videos, and articles from supported platforms.
+OpenAppCLI supports downloading images, videos, and articles from supported platforms.
 
 | Platform | Content Types | Notes |
 |----------|---------------|-------|
@@ -282,9 +282,9 @@ OpenCLI supports downloading images, videos, and articles from supported platfor
 For video downloads, install `yt-dlp` first: `brew install yt-dlp`
 
 ```bash
-opencli xiaohongshu download abc123 --output ./xhs
-opencli bilibili download BV1xxx --output ./bilibili
-opencli twitter download elonmusk --limit 20 --output ./twitter
+openappcli xiaohongshu download abc123 --output ./xhs
+openappcli bilibili download BV1xxx --output ./bilibili
+openappcli twitter download elonmusk --limit 20 --output ./twitter
 ```
 
 ## Output Formats
@@ -292,14 +292,14 @@ opencli twitter download elonmusk --limit 20 --output ./twitter
 All built-in commands support `--format` / `-f` with `table` (default), `json`, `yaml`, `md`, and `csv`.
 
 ```bash
-opencli bilibili hot -f json    # Pipe to jq or LLMs
-opencli bilibili hot -f csv     # Spreadsheet-friendly
-opencli bilibili hot -v         # Verbose: show pipeline debug steps
+openappcli bilibili hot -f json    # Pipe to jq or LLMs
+openappcli bilibili hot -f csv     # Spreadsheet-friendly
+openappcli bilibili hot -v         # Verbose: show pipeline debug steps
 ```
 
 ## Exit Codes
 
-opencli follows Unix `sysexits.h` conventions so it integrates naturally with shell pipelines and CI scripts:
+openappcli follows Unix `sysexits.h` conventions so it integrates naturally with shell pipelines and CI scripts:
 
 | Code | Meaning | When |
 |------|---------|------|
@@ -314,27 +314,27 @@ opencli follows Unix `sysexits.h` conventions so it integrates naturally with sh
 | `130` | Interrupted | Ctrl-C / SIGINT |
 
 ```bash
-opencli spotify status || echo "exit $?"   # 69 if browser not running
-opencli github issues 2>/dev/null
-[ $? -eq 77 ] && opencli github auth       # auto-auth if not logged in
+openappcli spotify status || echo "exit $?"   # 69 if browser not running
+openappcli github issues 2>/dev/null
+[ $? -eq 77 ] && openappcli github auth       # auto-auth if not logged in
 ```
 
 ## Plugins
 
-Extend OpenCLI with community-contributed adapters:
+Extend OpenAppCLI with community-contributed adapters:
 
 ```bash
-opencli plugin install github:user/opencli-plugin-my-tool
-opencli plugin list
-opencli plugin update --all
-opencli plugin uninstall my-tool
+openappcli plugin install github:user/openappcli-plugin-my-tool
+openappcli plugin list
+openappcli plugin update --all
+openappcli plugin uninstall my-tool
 ```
 
 | Plugin | Type | Description |
 |--------|------|-------------|
-| [opencli-plugin-github-trending](https://github.com/ByteYue/opencli-plugin-github-trending) | YAML | GitHub Trending repositories |
-| [opencli-plugin-hot-digest](https://github.com/ByteYue/opencli-plugin-hot-digest) | TS | Multi-platform trending aggregator |
-| [opencli-plugin-juejin](https://github.com/Astro-Han/opencli-plugin-juejin) | YAML | 稀土掘金 (Juejin) hot articles |
+| [openappcli-plugin-github-trending](https://github.com/ByteYue/openappcli-plugin-github-trending) | YAML | GitHub Trending repositories |
+| [openappcli-plugin-hot-digest](https://github.com/ByteYue/openappcli-plugin-hot-digest) | TS | Multi-platform trending aggregator |
+| [openappcli-plugin-juejin](https://github.com/Astro-Han/openappcli-plugin-juejin) | YAML | 稀土掘金 (Juejin) hot articles |
 
 See [Plugins Guide](./docs/guide/plugins.md) for creating your own plugin.
 
@@ -345,10 +345,10 @@ See [Plugins Guide](./docs/guide/plugins.md) for creating your own plugin.
 > **Full mode**: Before writing any adapter code, read [CLI-EXPLORER.md](./CLI-EXPLORER.md). It contains the complete browser exploration workflow, the 5-tier authentication strategy decision tree, and debugging guide.
 
 ```bash
-opencli explore https://example.com --site mysite   # Discover APIs + capabilities
-opencli synthesize mysite                            # Generate YAML adapters
-opencli generate https://example.com --goal "hot"   # One-shot: explore → synthesize → register
-opencli cascade https://api.example.com/data         # Auto-probe: PUBLIC → COOKIE → HEADER
+openappcli explore https://example.com --site mysite   # Discover APIs + capabilities
+openappcli synthesize mysite                            # Generate YAML adapters
+openappcli generate https://example.com --goal "hot"   # One-shot: explore → synthesize → register
+openappcli cascade https://api.example.com/data         # Auto-probe: PUBLIC → COOKIE → HEADER
 ```
 
 ## Testing
@@ -365,7 +365,7 @@ See **[TESTING.md](./TESTING.md)** for how to run and write tests.
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=jackwener/opencli&type=Date)](https://star-history.com/#jackwener/opencli&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=wanghaisheng/openappcli&type=Date)](https://star-history.com/#wanghaisheng/openappcli&Date)
 
 ## License
 
