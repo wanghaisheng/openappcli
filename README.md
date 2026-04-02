@@ -1,20 +1,21 @@
 # OpenAppCLI
 
-> **Universal Application Automation Platform - Make any application your CLI.**
-> Zero risk · Intelligent adaptation · AI-powered discovery · Multi-platform support
+> **Universal Application Automation Platform + AI Agent Interaction Standard - Make any application your CLI and AI partner!**
+> Zero risk · Intelligent adaptation · AI-powered discovery · MCP Protocol Integration · Multi-platform support
 
 [![中文文档](https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-0F766E?style=flat-square)](./README.zh-CN.md)
 [![License](https://img.shields.io/npm/l/@jackwener/opencli?style=flat-square)](./LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/wanghaisheng/openappcli?style=flat-square)](https://github.com/wanghaisheng/openappcli)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android%20%7C%20iOS-blue?style=flat-square)](https://github.com/wanghaisheng/openappcli)
+[![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-00D084?style=flat-square)](./docs/mcp-integration.md)
 
-A next-generation CLI tool that turns **any application** — websites, Electron apps, desktop software, mobile apps, and games — into a command-line interface. Powered by intelligent strategy selection, adaptive fallback mechanisms, and AI-native discovery.
+A next-generation CLI tool that turns **any application** — websites, Electron apps, desktop software, mobile apps, and games — into a command-line interface **and AI Agent-interactable platform**. Powered by intelligent strategy selection, adaptive fallback mechanisms, AI-native discovery, and **MCP Protocol integration**.
 
-**Evolved from OpenCLI** — Building on the solid foundation of browser and Electron automation, OpenAppCLI extends to universal application control with vision-based automation, system-level access, and mobile app support.
+**Evolved from OpenCLI** — Building on the solid foundation of browser and Electron automation, OpenAppCLI extends to universal application control with vision-based automation, system-level access, mobile app support, and **native integration with AI Agents through MCP Protocol**.
 
-**Built for the Universal Automation Era** — From desktop Notepad to mobile Instagram, from Unity games to professional software — one platform to automate them all.
+**Built for the AI Era** — From desktop Notepad to mobile Instagram, from Unity games to professional software — one platform to automate all applications and provide standardized interaction capabilities for AI Agents.
 
-**Built for AI Agents** — Configure an instruction in your `AGENT.md` or `.cursorrules` to run `openappcli list` via Bash. The AI will automatically discover and invoke all available tools.
+**Built for AI Agents** — Configure an instruction in your `AGENT.md` or `.cursorrules` to run `openappcli list` via Bash. The AI will automatically discover and invoke all available tools through MCP Protocol.
 
 **CLI Hub** — Register any local CLI (`openappcli register mycli`) so AI agents can discover and call it alongside built-in commands. Auto-installs missing tools via your package manager (e.g. if `gh` isn't installed, `openappcli gh ...` runs `brew install gh` first then re-executes seamlessly).
 
@@ -25,14 +26,16 @@ A next-generation CLI tool that turns **any application** — websites, Electron
 ## Highlights
 
 - **🌍 Universal Application Support** — Automate websites, Electron apps, desktop software, mobile apps, and games with a single platform
-- **🧠 Intelligent Strategy Selection** — AI-powered detection of optimal automation strategies (CDP → UI Hierarchy → Vision → System API)
+- **� AI Agent Native Integration** — Seamless integration with all AI Agents through MCP Protocol, standardized tools, resources, and prompts
+- **� Intelligent Strategy Selection** — AI-powered detection of optimal automation strategies (CDP → UI Hierarchy → Vision → System API)
 - **🔄 Adaptive Fallback Mechanisms** — Automatic degradation to the next best method when primary strategy fails
+- **📊 Information Extraction + Application Control** — Not just data extraction, but complete application behavior control (like, comment, upload, etc.)
 - **👁️ Advanced Vision Recognition** — SIFT/SURF/ORB feature matching, multi-scale template matching, OCR integration
 - **📱 Mobile App Automation** — Android/iOS support via ADB, Frida, and Airtest integration
 - **🎮 Game Engine Optimization** — Unity, Unreal, and custom engine support with anti-cheat bypass
 - **⚡ High-Performance Execution** — Minicap for fast screenshots, parallel processing, intelligent caching
 - **🔧 System-Level Access** — Windows/macOS/Linux APIs, accessibility frameworks, memory access
-- **🤖 AI-Native Development** — Automatic adapter generation, performance optimization, error recovery
+- **📝 MCP Prompt System** — Intelligent task templates that AI Agents can directly understand and execute complex automation workflows
 
 ## Why OpenAppCLI?
 
@@ -44,20 +47,25 @@ There are many great automation tools. Here's when OpenAppCLI is the right choic
 | **Zero-config desktop app control** | **OpenAppCLI** | Automatic strategy detection and fallback mechanisms |
 | **Mobile app automation** | **OpenAppCLI** | Android/iOS support with vision and system-level access |
 | **Game automation** | **OpenAppCLI** | Engine-specific optimizations and anti-cheat bypass |
+| **AI Agent application interaction** | **OpenAppCLI** | MCP Protocol native support, standardized tools and resource access |
 | **Web data extraction** | OpenAppCLI | Focused on web and Electron apps |
 | **Large-scale web crawling** | Crawl4AI, Scrapy | Purpose-built for throughput and scale |
 | **General browsing automation** | Browser-Use, Stagehand | LLM-driven general browsing for one-off tasks |
 
 **What makes OpenAppCLI different:**
 
-- **Universal Coverage** — One platform for all application types: Web → Desktop → Mobile → Games
+- **Universal Coverage** — One platform supports all application types: Web → Desktop → Mobile → Games
+- **AI Native Integration** — Becomes the standard bridge for AI Agent application interaction through MCP Protocol
+- **Bidirectional Interaction** — Not just data extraction, but complete application behavior control
 - **Intelligent Adaptation** — AI-driven strategy selection and automatic fallback optimization
 - **High Performance** — Minicap screenshots (100x faster), parallel processing, intelligent caching
-- **Anti-Detection** — Built-in stealth mode for games and protected applications
-- **Developer-Friendly** — Automatic adapter generation, visual debugging, comprehensive tooling
+- **Anti-Detection** — Built-in stealth mode, supports games and protected applications
+- **Developer Friendly** — Automatic adapter generation, visual debugging, comprehensive toolchain
 - **Enterprise Ready** — Distributed execution, monitoring, security, and compliance features
 
-> For a detailed comparison with Browser-Use, Crawl4AI, Firecrawl, and others, see the [Comparison Guide](./docs/comparison.md).
+> For detailed comparison with Browser-Use, Crawl4AI, Firecrawl and other tools, see [Comparison Guide](./docs/comparison.md).
+> 
+> For MCP integration details, see [MCP Integration Guide](./docs/mcp-integration.md).
 
 ---
 
@@ -71,13 +79,61 @@ There are many great automation tools. Here's when OpenAppCLI is the right choic
 npm install -g @wanghaisheng/openappcli
 ```
 
-**Install from source**
+### 2. Basic Usage
 
 ```bash
-git clone https://github.com/wanghaisheng/openappcli.git && cd openappcli && npm install && npm run build && npm link
+# List all available commands
+openappcli list                              # List all commands
+openappcli list -f yaml                      # List commands in YAML format
+openappcli hackernews top --limit 5          # Public API, no browser needed
+openappcli bilibili hot --limit 5            # Browser command
+openappcli zhihu hot -f json                 # JSON output
+openappcli zhihu hot -f yaml                 # YAML output
 ```
 
-### 2. Platform Setup
+### 3. MCP Integration Usage
+
+```bash
+# Start MCP server
+openappcli mcp start
+
+# AI Agent available tools
+mcp-tools list | grep openappcli
+🤖 Available OpenAppCLI Tools:
+   - openappcli.discover_applications
+   - openappcli.execute_automation
+   - openappcli.get_screenshot
+   - openappcli.extract_data
+
+# AI Agent example
+ai-agent "Extract Bilibili hot videos using OpenAppCLI"
+✅ AI Agent executed: openappcli.bilibili.hot
+📺 Retrieved 10 hot videos via MCP protocol
+```
+
+### 4. Application Operation Examples
+
+```bash
+# Information extraction (original capability)
+openappcli instagram feed --limit 10
+📸 Latest 10 posts from @user1
+
+# Application operations (new capability)
+openappcli instagram like --post_id 12345
+❤️ Liked post successfully
+
+openappcli instagram comment --post_id 12345 "Great content!"
+💬 Comment posted successfully
+
+openappcli instagram follow --user @target_user
+ Following @target_user
+
+# Batch operations
+openappcli bilibili batch-like --tag "AI" --limit 5
+🎯 Liked 5 videos with AI tag
+```
+
+### 5. Platform Setup
 
 #### For Web & Electron Apps (Browser Bridge)
 > OpenAppCLI connects to your browser through a lightweight **Browser Bridge** Chrome Extension + micro-daemon (zero config, auto-start).
@@ -108,7 +164,7 @@ openappcli desktop setup macos --accessibility
 openappcli desktop setup linux --x11
 ```
 
-### 3. Verify & Try
+### 6. Verify & Try
 
 ```bash
 openappcli doctor          # Check all platform connectivity
@@ -131,9 +187,9 @@ openappcli connect --device android
 openappcli discover --app "com.instagram.android"
 openappcli instagram feed --limit 5
 
-# Game automation
-openappcli discover --app "genshin.exe"
-openappcli genshin inventory
+# AI Agent integration
+openappcli mcp start
+ai-agent "Like Instagram's latest photos for me using OpenAppCLI"
 ```
 
 ### Update
@@ -156,6 +212,52 @@ OpenAppCLI supports a wide range of application types across all major platforms
 
 ### 🖥️ Desktop Applications
 *New universal desktop automation*
+- **Windows Native Apps**: Via Win32 API and Accessibility frameworks
+- **macOS Native Apps**: Via Cocoa and Accessibility APIs
+- **Linux Native Apps**: Via X11 and AT-SPI
+- **Cross-platform IDEs**: VS Code, Visual Studio, Xcode, etc.
+
+### 📱 Mobile Applications
+*Complete mobile app control*
+- **Android**: ADB, UIAutomator, Frida dynamic instrumentation
+- **iOS**: XCUITest, Accessibility Inspector
+- **Cross-platform Apps**: Instagram, TikTok, WeChat, etc.
+
+### 🎮 Game Applications
+*Specialized game engine support*
+- **Unity Games**: Memory access, GameObject manipulation, anti-cheat bypass
+- **Unreal Games**: Actor and component access, rendering data extraction
+- **Custom Engines**: Vision-based automation with AI enhancement
+
+### 🤖 AI Agent Integration
+*Native MCP Protocol support*
+- **Standardized Tools**: Universal automation interface for all AI Agents
+- **Resource Access**: Real-time application state and system information
+- **Prompt Templates**: Intelligent task templates for complex workflows
+
+## CLI Hub
+
+OpenAppCLI acts as a universal hub for your existing command-line tools — unified discovery, pure passthrough execution, and auto-install (if a tool isn't installed, OpenAppCLI runs `brew install <tool>` automatically before re-running the command).
+
+| External CLI | Description | Example |
+|--------------|-------------|---------|
+| **gh** | GitHub CLI | `openappcli gh pr list --limit 5` |
+| **obsidian** | Obsidian vault management | `openappcli obsidian search query="AI"` |
+| **docker** | Docker | `openappcli docker ps` |
+| **lark-cli** | Lark/Feishu — messages, docs, calendar, tasks, 200+ commands | `openappcli lark-cli calendar +agenda` |
+| **dingtalk** | DingTalk — cross-platform CLI for DingTalk's full suite, designed for humans and AI agents | `openappcli dingtalk msg send --to user "hello"` |
+| **wecom** | WeCom/企业微信 — CLI for WeCom open platform, for humans and AI agents | `openappcli wecom msg send --to user "hello"` |
+| **vercel** | Vercel — deploy projects, manage domains, env vars, logs | `openappcli vercel deploy --prod` |
+
+**Zero-config passthrough**：OpenAppCLI forwards your input directly to the underlying binary, preserving native stdout / stderr behavior.
+
+**Auto-install**：If you run `openappcli gh ...` and `gh` isn't installed, OpenAppCLI automatically installs it via your package manager first, then re-executes seamlessly.
+
+**Register your own** — add any local CLI so AI agents can discover it via `openappcli list`:
+
+```bash
+openappcli register mycli
+```
 - **Windows Apps**: Notepad, Calculator, VS Code, Photoshop, etc.
 - **macOS Apps**: Finder, Safari, Xcode, etc.  
 - **Linux Apps**: File managers, IDEs, system tools
@@ -234,29 +336,16 @@ OpenAppCLI acts as a universal hub for your existing command-line tools — unif
 
 | External CLI | Description | Example |
 |--------------|-------------|---------|
-| **gh** | GitHub CLI | `openappcli gh pr list --limit 5` |
-| **obsidian** | Obsidian vault management | `openappcli obsidian search query="AI"` |
-| **docker** | Docker | `openappcli docker ps` |
-| **lark-cli** | Lark/Feishu — messages, docs, calendar, tasks, 200+ commands | `openappcli lark-cli calendar +agenda` |
-| **dingtalk** | DingTalk — cross-platform CLI for DingTalk's full suite, designed for humans and AI agents | `openappcli dingtalk msg send --to user "hello"` |
-| **wecom** | WeCom/企业微信 — CLI for WeCom open platform, for humans and AI agents | `openappcli wecom msg send --to user "hello"` |
-| **vercel** | Vercel — deploy projects, manage domains, env vars, logs | `openappcli vercel deploy --prod` |
-
-**Register your own** — add any local CLI so AI agents can discover it via `openappcli list`:
-
-```bash
-openappcli register mycli
-```
 
 ### Desktop App Adapters
 
-Control Electron desktop apps directly from the terminal. Each adapter has its own detailed documentation:
+Each desktop adapter has its own detailed documentation, including command reference, startup configuration, and usage examples.
 
 | App | Description | Doc |
 |-----|-------------|-----|
 | **Cursor** | Control Cursor IDE — Composer, chat, code extraction | [Doc](./docs/adapters/desktop/cursor.md) |
 | **Codex** | Drive OpenAI Codex CLI agent headlessly | [Doc](./docs/adapters/desktop/codex.md) |
-| **Antigravity** | Control Antigravity Ultra from terminal | [Doc](./docs/adapters/desktop/antigravity.md) |
+| **Antigravity** | Control Antigravity Ultra from the terminal | [Doc](./docs/adapters/desktop/antigravity.md) |
 | **ChatGPT** | Automate ChatGPT macOS desktop app | [Doc](./docs/adapters/desktop/chatgpt.md) |
 | **ChatWise** | Multi-LLM client (GPT-4, Claude, Gemini) | [Doc](./docs/adapters/desktop/chatwise.md) |
 | **Notion** | Search, read, write Notion pages | [Doc](./docs/adapters/desktop/notion.md) |
@@ -271,20 +360,37 @@ OpenAppCLI supports downloading images, videos, and articles from supported plat
 
 | Platform | Content Types | Notes |
 |----------|---------------|-------|
-| **xiaohongshu** | Images, Videos | Downloads all media from a note |
-| **bilibili** | Videos | Requires `yt-dlp` installed |
-| **twitter** | Images, Videos | From user media tab or single tweet |
-| **douban** | Images | Poster / still image lists |
-| **pixiv** | Images | Original-quality illustrations, multi-page |
-| **zhihu** | Articles (Markdown) | Exports with optional image download |
-| **weixin** | Articles (Markdown) | WeChat Official Account articles |
+| **Xiaohongshu** | Images, Videos | Downloads all media from a note |
+| **Bilibili** | Videos | Requires `yt-dlp` |
+| **Twitter/X** | Images, Videos | From user media tab or single tweet |
+| **Pixiv** | Images | Original-quality illustrations, multi-page |
+| **Zhihu** | Articles (Markdown) | Exports with optional image download |
+| **WeChat** | Articles (Markdown) | WeChat Official Account articles |
 
 For video downloads, install `yt-dlp` first: `brew install yt-dlp`
 
 ```bash
+# Download Xiaohongshu note media
 openappcli xiaohongshu download abc123 --output ./xhs
+
+# Download Bilibili video (requires yt-dlp)
 openappcli bilibili download BV1xxx --output ./bilibili
+openappcli bilibili download BV1xxx --quality 1080p  # Specify quality
+
+# Download Twitter user media
 openappcli twitter download elonmusk --limit 20 --output ./twitter
+
+# Download single tweet media
+openappcli twitter download --tweet-url "https://x.com/user/status/123" --output ./twitter
+
+# Export Zhihu article as Markdown
+openappcli zhihu download "https://zhuanlan.zhihu.com/p/xxx" --output ./zhihu
+
+# Export and download images
+openappcli zhihu download "https://zhuanlan.zhihu.com/p/xxx" --download-images
+
+# Export WeChat article as Markdown
+openappcli weixin download --url "https://mp.weixin.qq.com/s/xxx" --output ./weixin
 ```
 
 ## Output Formats
@@ -292,14 +398,18 @@ openappcli twitter download elonmusk --limit 20 --output ./twitter
 All built-in commands support `--format` / `-f` with `table` (default), `json`, `yaml`, `md`, and `csv`.
 
 ```bash
+openappcli list -f yaml            # List command registry in YAML
+openappcli bilibili hot -f table   # Default: Rich text table
 openappcli bilibili hot -f json    # Pipe to jq or LLMs
-openappcli bilibili hot -f csv     # Spreadsheet-friendly
+openappcli bilibili hot -f yaml    # More human-readable
+openappcli bilibili hot -f md      # Markdown
+openappcli bilibili hot -f csv     # CSV
 openappcli bilibili hot -v         # Verbose: show pipeline debug steps
 ```
 
 ## Exit Codes
 
-openappcli follows Unix `sysexits.h` conventions so it integrates naturally with shell pipelines and CI scripts:
+OpenAppCLI follows Unix `sysexits.h` conventions so it integrates naturally with shell pipelines and CI scripts:
 
 | Code | Meaning | When |
 |------|---------|------|
@@ -324,17 +434,17 @@ openappcli github issues 2>/dev/null
 Extend OpenAppCLI with community-contributed adapters:
 
 ```bash
-openappcli plugin install github:user/openappcli-plugin-my-tool
-openappcli plugin list
-openappcli plugin update --all
-openappcli plugin uninstall my-tool
+openappcli plugin install github:user/openappcli-plugin-my-tool  # Install
+openappcli plugin list                                         # View installed
+openappcli plugin update --all                                 # Update all
+openappcli plugin uninstall my-tool                            # Uninstall
 ```
 
 | Plugin | Type | Description |
 |--------|------|-------------|
 | [openappcli-plugin-github-trending](https://github.com/ByteYue/openappcli-plugin-github-trending) | YAML | GitHub Trending repositories |
 | [openappcli-plugin-hot-digest](https://github.com/ByteYue/openappcli-plugin-hot-digest) | TS | Multi-platform trending aggregator |
-| [openappcli-plugin-juejin](https://github.com/Astro-Han/openappcli-plugin-juejin) | YAML | 稀土掘金 (Juejin) hot articles |
+| [openappcli-plugin-juejin](https://github.com/Astro-Han/openappcli-plugin-juejin) | YAML | 稀土掘金 hot articles |
 
 See [Plugins Guide](./docs/guide/plugins.md) for creating your own plugin.
 
@@ -357,11 +467,17 @@ See **[TESTING.md](./TESTING.md)** for how to run and write tests.
 
 ## Troubleshooting
 
-- **"Extension not connected"** — Ensure the Browser Bridge extension is installed and **enabled** in `chrome://extensions`.
-- **"attach failed: Cannot access a chrome-extension:// URL"** — Another extension may be interfering. Try disabling other extensions temporarily.
-- **Empty data or 'Unauthorized' error** — Your Chrome login session may have expired. Navigate to the target site and log in again.
-- **Node API errors** — Ensure Node.js >= 20. Some dependencies require modern Node APIs.
-- **Daemon issues** — Check status: `curl localhost:19825/status` · View logs: `curl localhost:19825/logs`
+- **"Extension not connected" error**
+  - Ensure your Chrome has the **openappcli Browser Bridge** extension installed and **enabled** in `chrome://extensions`.
+- **"attach failed: Cannot access a chrome-extension:// URL" error**
+  - Other extensions (like youmind, New Tab Override or AI assistant extensions) may be interfering. Try **temporarily disabling other extensions**.
+- **Empty data or 'Unauthorized' error**
+  - Your Chrome login session may have expired. Navigate to the target site in a new tab and log in again.
+- **Node API errors (like parseArgs, fs, etc.)**
+  - Ensure Node.js >= 20. Some dependencies require modern Node APIs.
+- **Daemon issues**
+  - Check status: `curl localhost:19825/status`
+  - View logs: `curl localhost:19825/logs`
 
 ## Star History
 
@@ -370,3 +486,29 @@ See **[TESTING.md](./TESTING.md)** for how to run and write tests.
 ## License
 
 [Apache-2.0](./LICENSE)
+
+---
+
+## 🎯 Final Vision
+
+OpenAppCLI will become **the universal language for application automation** and **the standard bridge for AI Agent application interaction**, just as SQL became the universal language for database queries.
+
+### Core Value Propositions:
+1. **Zero Learning Cost** — Any application, one command line to automate
+2. **Unlimited Extensibility** — Support any platform, any application type
+3. **Intelligent Adaptation** — AI-driven strategy selection and optimization
+4. **Open Ecosystem** — Community-driven adapter marketplace
+5. **Enterprise-Grade Reliability** — Production environment stability and performance
+6. **AI Native Integration** — Seamless integration with all AI Agents through MCP Protocol
+7. **Bidirectional Interaction** — Not just data extraction, but complete application behavior control
+8. **Standardized Protocol** — Industry-standard tools and resource access
+
+### Impact:
+- **Developers** — Liberated from tedious reverse engineering, focus on business logic
+- **Enterprises** — Significantly reduce automation costs, improve efficiency
+- **Users** — Enjoy more intelligent, more automated application experiences
+- **Industry** — Promote standardization and adoption of application automation
+- **AI Community** — Provide standardized application interaction capabilities, accelerate AI application deployment
+- **Tool Ecosystem** — Establish unified application automation standards, foster ecosystem prosperity
+
+**Ultimately, OpenAppCLI will achieve the vision of "Automate Everything, Enable AI-to-Application Interaction," allowing any application to be easily controlled and automated through both command lines and AI Agents, becoming the universal bridge connecting the digital world and the intelligent world.** 🚀🤖
